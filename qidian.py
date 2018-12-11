@@ -1,6 +1,5 @@
 import requests
 from bs4 import BeautifulSoup as bs
-import qidian_search as sr
 
 def new():
     url = 'https://www.qidian.com/rank/pubnewbook'
@@ -35,4 +34,5 @@ if (key=='新书'):
 elif (key=='完本'):
     finish()
 else:
+    import qidian_search as sr
     sr.search(key)
