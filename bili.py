@@ -9,6 +9,5 @@ print(answers)
 for tag in answers:
     print('&')
     tag_ = tag.find('p', "t")
-    flag = tag_.find('>')
-    title = tag[flag+1:]
+    title = tag_.text
     print(title)
