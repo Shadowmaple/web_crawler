@@ -10,6 +10,7 @@ url = "https://account.ccnu.edu.cn/cas/login"
 r = requests.get(url)
 soup = BeautifulSoup(r.text, 'html.parser')
 cookie = r.cookies['JSESSIONID']
+print(cookie)
 lt = soup.find('input',attrs={'name':'lt'})['value']
 execution = soup.find('input',attrs={'name':'execution'})['value']
 
