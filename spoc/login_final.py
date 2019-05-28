@@ -4,7 +4,7 @@ import pprint
 
 loginName = input('LoginName:')
 password = getpass.getpass()
-#password = loginName
+# password = loginName
 payload = {
         'loginName':loginName,
         'password':password,
