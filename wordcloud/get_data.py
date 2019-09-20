@@ -47,7 +47,7 @@ def crawler():
         }
 
     last_comment_id = ""
-    files = open("data.txt", "a", encoding = "utf-8")
+    files = open("data.txt", "wt", encoding = "utf-8")
     count = 0
 
     # 页码，每页25条评论
