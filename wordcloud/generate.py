@@ -1,6 +1,7 @@
+#!/usr/bin/python3
+
 import jieba
 import numpy as np
-import requests
 from PIL import Image
 from wordcloud import WordCloud
 

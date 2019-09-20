@@ -1,4 +1,7 @@
+#!/usr/bin/python3
+
 import re
+import time
 
 import requests
 
@@ -47,7 +50,8 @@ def crawler():
     files = open("data.txt", "a", encoding = "utf-8")
     count = 0
 
-    for i in range(100):
+    # 页码，每页25条评论
+    for i in range(2000):
         querystring["pagenum"] = str(i)
         querystring["lasthotcommentid"] = last_comment_id
         response = requests.request("GET", url, headers = headers, params = querystring)
@@ -75,5 +79,14 @@ def crawler():
 
 
 if __name__ == '__main__':
+    start = time.time()
+    # 爬取数据
     crawler()
+    end = time.time()
+    runtime = end - start
+    if runtime <= 60:
+        print('Running time: {} Seconds.'.format(runtime))
+    else:
+        print('Running time: {} Minutes.'.format(runtime / 60))
+
     print("OK")
