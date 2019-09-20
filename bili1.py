@@ -1,4 +1,4 @@
-#通过视频api获取视频号和标题
+# 通过视频api获取视频号和标题
 
 import requests
 
@@ -9,4 +9,3 @@ for i in range(10):
     av = str(douga[str(i)]['aid'])
     title = douga[str(i)]['title']
     print('av:'+ av + '   '+ title)
-

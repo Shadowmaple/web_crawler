@@ -1,6 +1,10 @@
+# 根据书名搜索
+
+from urllib import parse
+
 import requests
 from bs4 import BeautifulSoup as bs
-from urllib import parse
+
 
 def search(name):
     url = 'https://www.qidian.com/search?kw=' + name

@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup as bs
 
+
 def data():
     url = 'http://www.weather.com.cn/weather1d/101200101.shtml'
     r = requests.get(url)
@@ -15,4 +16,3 @@ def data():
     return weather
 
 print(data())
-

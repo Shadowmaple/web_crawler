@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup as bs
 
+
 def new():
     url = 'https://www.qidian.com/rank/pubnewbook'
     r = requests.get(url)
@@ -25,14 +26,14 @@ def finish():
         print(title)
         sum += 1
     print('----------')
-    print('#共'+str(sum)+'个项目')
+    print('#共' + str(sum) + '个项目')
 
-
-key = input('关键字：')
-if (key=='新书'):
-    new()
-elif (key=='完本'):
-    finish()
-else:
-    import qidian_search as sr
-    sr.search(key)
+if __name__ == '__main__':
+    key = input('关键字：')
+    if (key == '新书'):
+        new()
+    elif (key == '完本'):
+        finish()
+    else:
+        import qidian_search as sr
+        sr.search(key)

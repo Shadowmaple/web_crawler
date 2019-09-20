@@ -1,5 +1,6 @@
-import requests
 from urllib import parse
+
+import requests
 from bs4 import BeautifulSoup
 
 word = input('搜索内容：')
@@ -13,6 +14,6 @@ for tag in answers:
     for part in tag:
         start = part.find('pan.baidu.com')
 #        print('*'+ str(start))
-        if start!=None and start!=-1:
+        if start != None and start != -1:
             result = part[start:]
             print(result)
